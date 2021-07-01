@@ -3,6 +3,7 @@ import {Route, Switch} from 'react-router-dom';
 import Button from "../UI/Button";
 import ShopList from "../components/ShopList";
 import ShopSingleItem from "../components/ShopSingleItem";
+import SocialIcons from "../UI/SocialIcons";
 
 
 class Shop extends Component {
@@ -19,24 +20,14 @@ class Shop extends Component {
                        />
                    ))}
                 </div>
-                <div className={"social"}>
-                   {this.props.shop.socialLinks.map((oneSocialLink) => (
-                       <a className={"socialLink-item"}
-                          target="_blank"
-                          key={oneSocialLink.to}
-                          href={oneSocialLink.to}
-                       >
-                          <i className={oneSocialLink.icon}></i>
-                       </a>
-                   ))}
-                </div>
+                <SocialIcons socialLinks={this.props.shop.socialLinks}/>
              </aside>
              <main className={"shop-list"}>
                 <Route path="/shop/item/1" render={(props) =>
                     <ShopSingleItem {...props}
                                     socialLinks={this.props.shop.socialLinks}
                                     shopItemColours={this.props.shop.shopItemColours}
-                                    shopItems={this.props.shop.shopItems} />}/>
+                                    shopItems={this.props.shop.shopItems}/>}/>
                 <Route path="/shop" render={(props) =>
                     <ShopList {...props}
                               shopItems={this.props.shop.shopItems}/>}/>

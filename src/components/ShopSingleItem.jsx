@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import SocialIcons from "../UI/SocialIcons";
 
 class ShopSingleItem extends Component {
    state = {}
@@ -41,20 +42,7 @@ class ShopSingleItem extends Component {
                       <button> Add to chart</button>
                       <button> Buy it now</button>
                    </div>
-                   <div className={"social"}>
-                      {this.props.socialLinks.map((oneSocialLink) => (
-                          <a className={"socialLink-item"}
-                             target="_blank"
-                             rel="noreferrer"
-                             key={oneSocialLink.to}
-                             href={oneSocialLink.to}
-                          >
-                             <i className={oneSocialLink.icon}></i>
-                          </a>
-
-                      ))}
-
-                   </div>
+                   <SocialIcons socialLinks={this.props.socialLinks}/>
                 </div>
              </div>
           </div>
