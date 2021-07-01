@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
+import "font-awesome/css/font-awesome.css"
+
 import HeaderX from "./components/HeaderX";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
@@ -36,7 +38,8 @@ class App extends Component {
              <HeaderX navLinks={this.state.navLinks}/>
              <div className={"container"}>
                 <Switch>
-                   <Route path={"/shop"} render={(props) => <Shop shop={this.state.shop} {...props} />}/>
+                   {/* kai reikia perduoti props i route, mes tai darome su sekancia sintakse apacioje:*/}
+                   <Route path={"/shop"} render={(props) => <Shop shop={this.state.shop} {...props} />} />
                    <Route exact path={"/"} component={Home}/>
                 </Switch>
              </div>
