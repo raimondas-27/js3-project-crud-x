@@ -9,6 +9,10 @@
     font-family : "Raleway", sans-serif;
 }
 
+img {
+    max-width: 100%;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -17,6 +21,10 @@ a {
 .container {
     max-width: 800px;
     margin: auto;
+}
+
+.categories-aside {
+    min-width: 150px;
 }
 
 /* Variables*/
@@ -62,11 +70,25 @@ a {
     list-style: none;
     padding-left: 0;
     margin-top: 2em;
+    margin-bottom: 0.5em;
 }
-
-
 
 
 .social {
     display: flex;
+}
+
+.socialLink-item {
+    padding-right: 0.5em;
+    font-size: 2em;
+}
+
+/*Shop item*/
+
+.shop-item {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1em;
+    font-weight: normal;
+    margin-bottom: 0.2em;
 }

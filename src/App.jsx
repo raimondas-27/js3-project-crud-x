@@ -25,10 +25,16 @@ class App extends Component {
             {_id: 5, title: "T-Shirts"},
          ],
          socialLinks: [
-            {to: "www.facebook.com", icon: "fa fa-facebook"},
-            {to: "www.instagram.com", icon: "fa fa-instagram"},
-            {to: "www.twitter.com", icon: "fa fa-twitter"},
+            {to: "https://www.facebook.com", icon: "fa fa-facebook"},
+            {to: "https://www.instagram.com", icon: "fa fa-instagram"},
+            {to: "https://www.twitter.com", icon: "fa fa-twitter"},
          ],
+         shopItems : [
+            {_id: 1, title : "Trench Skinny Demin Jeans", price : 799.99, image : "jeans_0", color : "black", size: "normal"},
+            {_id: 2, title : "Omari Jacket - Black", price : 1599.99, image : "jacket_0",  color : "black",size: "normal"},
+            {_id: 3, title : "Quebec Denim Shirt - Black", price : 699.99, image : "shirt_0",  color : "black",size: "large"},
+
+         ]
       },
    }
 
