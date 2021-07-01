@@ -7,9 +7,9 @@ class ShopList extends Component {
    render() {
       return (
           <div className={"shop-list d-flex"}>
-             <ShopItem/>
-             <ShopItem/>
-             <ShopItem/>
+             {this.props.shopItems.map((oneItem) => (
+                 <ShopItem key={oneItem._id} oneItem={oneItem}/>
+             ))}
           </div>
       );
    }

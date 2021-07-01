@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import {Route, Switch} from 'react-router-dom';
 import Button from "../UI/Button";
 import ShopList from "../components/ShopList";
+import ShopSingleItem from "../components/ShopSingleItem";
 
 
 class Shop extends Component {
@@ -30,7 +32,10 @@ class Shop extends Component {
                 </div>
              </aside>
              <main className={"shop-list"}>
-                <ShopList/>
+                <Route path="/shop/item/1" render={(props) =>
+                    <ShopSingleItem {...props} />}/>
+                <Route path="/shop" render={(props) =>
+                    <ShopList {...props} shopItems={this.props.shop.shopItems}/>}/>
              </main>
           </div>
       );

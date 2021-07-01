@@ -29,10 +29,34 @@ class App extends Component {
             {to: "https://www.instagram.com", icon: "fa fa-instagram"},
             {to: "https://www.twitter.com", icon: "fa fa-twitter"},
          ],
-         shopItems : [
-            {_id: 1, title : "Trench Skinny Demin Jeans", price : 799.99, image : "jeans_0", color : "black", size: "normal"},
-            {_id: 2, title : "Omari Jacket - Black", price : 1599.99, image : "jacket_0",  color : "black",size: "normal"},
-            {_id: 3, title : "Quebec Denim Shirt - Black", price : 699.99, image : "shirt_0",  color : "black",size: "large"},
+         shopItems: [
+            {
+               _id: 1,
+               title: "Trench Skinny Demin Jeans",
+               price: 799.99,
+               image: "jeans",
+               color: "black",
+               size: "normal",
+               clothes_direction : "jeans",
+            },
+            {
+               _id: 2,
+               title: "Omari Jacket - Black",
+               price: 1599.99,
+               image: "jackets",
+               color: "black",
+               size: "normal",
+               clothes_direction : "jackets",
+            },
+            {
+               _id: 3,
+               title: "Quebec Denim Shirt - Black",
+               price: 699.99,
+               image: "shirts",
+               color: "black",
+               size: "large",
+               clothes_direction : "shirts",
+            },
 
          ]
       },
@@ -45,8 +69,13 @@ class App extends Component {
              <div className={"container"}>
                 <Switch>
                    {/* kai reikia perduoti props i route, mes tai darome su sekancia sintakse apacioje:*/}
-                   <Route path={"/shop"} render={(props) => <Shop shop={this.state.shop} {...props} />} />
-                   <Route exact path={"/"} component={Home}/>
+                   <Route path={"/shop"} render={(props) =>
+                       <Shop
+                           shop={this.state.shop}
+                           {...props} />}
+                   />
+                   <Route exact path={"/"}
+                          component={Home}/>
                 </Switch>
              </div>
           </div>
