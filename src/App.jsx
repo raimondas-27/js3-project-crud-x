@@ -57,8 +57,8 @@ class App extends Component {
                size: "large",
                clothes_direction : "shirts",
             },
-
-         ]
+         ],
+         shopItemColours : ["White", "Black", "Blue"],
       },
    }
 

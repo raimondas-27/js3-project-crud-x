@@ -33,9 +33,13 @@ class Shop extends Component {
              </aside>
              <main className={"shop-list"}>
                 <Route path="/shop/item/1" render={(props) =>
-                    <ShopSingleItem {...props} />}/>
+                    <ShopSingleItem {...props}
+                                    socialLinks={this.props.shop.socialLinks}
+                                    shopItemColours={this.props.shop.shopItemColours}
+                                    shopItems={this.props.shop.shopItems} />}/>
                 <Route path="/shop" render={(props) =>
-                    <ShopList {...props} shopItems={this.props.shop.shopItems}/>}/>
+                    <ShopList {...props}
+                              shopItems={this.props.shop.shopItems}/>}/>
              </main>
           </div>
       );

@@ -6,7 +6,7 @@
 }
 
 .App {
-    font-family : "Raleway", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 img {
@@ -30,8 +30,8 @@ a {
 /* Variables*/
 
 :root {
-    --primary : #333;
-    --secondary : #snow;
+    --primary: #333;
+    --secondary: #snow;
 }
 
 /* common */
@@ -46,13 +46,13 @@ a {
 
 /* Header */
 
-.header{
+.header {
     background-color: #333;
     color: snow;
 }
 
 .logo {
-    font-size : 1.5em;
+    font-size: 1.5em;
 }
 
 .nav-link-item {
@@ -91,4 +91,51 @@ a {
     font-size: 1em;
     font-weight: normal;
     margin-bottom: 0.2em;
+}
+
+/* Single shop item */
+
+.single-shop-item__description {
+    line-height: 2.5em;
+}
+
+.single-shop-item__content {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.single-shop-item__description-title {
+    font-size: 1.5em;
+    font-style: normal;
+}
+
+.single-shop-item__description-price {
+    font-size: 21px;
+}
+
+.single-shop-item__description-options {
+    display: flex;
+
+}
+
+.single-shop-item__description-colour {
+    padding-right: 10px;
+}
+
+.options-colour {
+    font-size: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+.single-shop-item__description-buttons {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    color: black;
+}
+
+.single-shop-item__description-buttons > button {
+    height: 40px;
+    color: black;
 }
